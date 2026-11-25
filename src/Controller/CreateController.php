@@ -26,16 +26,16 @@ final class CreateController extends CRUDController
         if ($request->query->has('pcode') && $request->isXmlHttpRequest()) {
             return $this->renderWithExtraParams('@SonataMedia/MediaAdmin/select_provider.html.twig', [
                 'providers' => $this->pool->getProvidersByContext(
-                    $request->get('context', $this->pool->getDefaultContext())
+                    $request->query->get('context', $this->pool->getDefaultContext())
                 ),
                 'action' => 'create',
             ]);
         }
 
-        if (null === $request->get('provider') && $request->isMethod('get')) {
+        if (null === $request->query->get('provider') && $request->isMethod('GET')) {
             return $this->renderWithExtraParams('@SonataMultiUpload/select_provider.html.twig', [
                 'providers' => $this->pool->getProvidersByContext(
-                    $request->get('context', $this->pool->getDefaultContext())
+                    $request->query->get('context', $this->pool->getDefaultContext())
                 ),
                 'action' => 'create',
             ]);
