@@ -16,7 +16,7 @@
         "sonata-project/media-bundle": "^4.1",
         "symfony/twig-bridge": "^5.4 || ^6.4 || ^7.0",
         "twig/twig": "^2.6 || ^3.3",
-        "webmozart/assert": "^1.10"
+        "webmozart/assert": "^1.10 || ^2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
